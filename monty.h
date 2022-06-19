@@ -18,7 +18,7 @@ typedef struct stack_s
 } stack_t;
 
 stack_t *new_stack_t(int n);
-void push(stack_t **stack, int n);
+stack_t *push(stack_t **stack, int n);
 stack_t *pop(stack_t **stack);
 void free_stack_t(stack_t *item);
 void free_stack(stack_t **stack);
