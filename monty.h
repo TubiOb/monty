@@ -17,6 +17,12 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 
+stack_t *new_stack_t(int n);
+void push(stack_t **stack, int n);
+stack_t *pop(stack_t **stack);
+void free_stack_t(stack_t *item);
+void free_stack(stack_t **stack);
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -30,5 +36,7 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+
 
 #endif /* MONTY_H */
