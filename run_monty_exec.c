@@ -30,7 +30,7 @@ void run_monty_exec(FILE *fp)
     if (strcmp(op_code, "push") == 0)
         op_push(&stack, line_number, op_code_arg);
     
-    op_code_handler = select_opcode_handler(op_code);
+    op_code_handler = select_op_code_handler(op_code);
     
     if (op_code_handler)
         op_code_handler(&stack , line_number);
