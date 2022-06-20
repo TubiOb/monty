@@ -11,7 +11,6 @@ void run_monty_exec(FILE *fp)
   ssize_t len;
   char *op_code = NULL, *op_code_arg = NULL;
   size_t line_number = 0;
-  int_op_code_arg;
   stack_t *stack = NULL;
   
   /* read a line */
