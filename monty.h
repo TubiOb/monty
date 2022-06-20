@@ -43,4 +43,6 @@ void op_pall(stack_t **stack, unsigned int line_number);
 void op_pint(stack_t **stack, unsigned int line_number);
 void op_pop(stack_t **stack, unsigned int line_number);
 
+void run_monty_exec(FILE *fp);
+
 #endif /* MONTY_H */
