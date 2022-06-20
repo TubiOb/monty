@@ -9,7 +9,7 @@ int main(int argc, char **argc)
   /* no file provided */
   if (argc != 2)
   {
-    fprint(stderr, "USAGE: monty file\n");
+    fprintf(stderr, "USAGE: monty file\n");
     exit(EXIT_FAILURE);
   }
   
@@ -19,7 +19,7 @@ int main(int argc, char **argc)
   /* can't open the file */
   if (fp == NULL)
   {
-    fprint(stderr, "Error: Can't open file %s\n", argv[1]);
+    fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
     exit(EXIT_FAILURE);
   }
   
