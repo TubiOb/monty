@@ -47,6 +47,8 @@ void op_pall(stack_t **stack, unsigned int line_number);
 void op_pint(stack_t **stack, unsigned int line_number);
 void op_pop(stack_t **stack, unsigned int line_number);
 
+void (*select_op_code_handler(char *op_code))(stack_t **, unsigned int);
+
 void run_monty_exec(FILE *fp);
 
 int is_numeric(char *str);
