@@ -12,6 +12,7 @@ void run_monty_exec(FILE *fp)
   char *op_code = NULL, *op_code_arg = NULL;
   size_t line_number = 0;
   stack_t *stack = NULL;
+  void (*op_code_handler)(stack_t **, unsigned int);
   
   /* read a line */
   while ((len = getline(&line, &line_size, fp)) != -1)
@@ -29,13 +30,28 @@ void run_monty_exec(FILE *fp)
     if (strcmp(op_code, "push") == 0)
         op_push(&stack, line_number, op_code_arg);
     
-    else if (strcmp(op_code, "pall) == 0)
-        op_pall(&stack, line_number);
+    op_code_handler = select_opcode_handler(op_code);
+    
+    if (op_code_handler)
+        op_code_handler(&stack , line_number);
+    else
+    {
+      fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
+      exit(EXIT_FAILURE);
+    }
+    
+//     else if (strcmp(op_code, "pall) == 0)
+//         op_pall(&stack, line_number);
                
-    else if (strcmp(op_code, "pint) == 0)
-        op_pint(&stack, line_number);
+//     else if (strcmp(op_code, "pint) == 0)
+//         op_pint(&stack, line_number);
                     
-    else if (strcmp(op_code, "pop") == 0)
-        op_pop(&stack, line_number);
+//     else if (strcmp(op_code, "pop") == 0)
+//         op_pop(&stack, line_number);
+//     else
+//     {
+//       fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
+//       exit(EXIT_FAILURE);
+//     }
   }
 }
