@@ -40,7 +40,10 @@ void run_monty_exec(FILE *fp)
     if (strcmp(op_code, "pall) == 0)
         op_pall(&stack, line_number);
                
-    else if (strcmp(op_code, "pint) ==0)
+    else if (strcmp(op_code, "pint) == 0)
         op_pint(&stack, line_number);
+                    
+    else if (strcmp(op_code, "pop") == 0)
+        op_pop(&stack, line_number);
   }
 }
