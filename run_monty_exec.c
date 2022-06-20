@@ -34,11 +34,13 @@ void run_monty_exec(FILE *fp)
       
       int_op_code_arg = atoi(op_code_arg);
       push(&stack, int_op_code_arg);
+      continue;
     }
-    else
-    {
-      /* get the op_code handler */
-      /* execute the op_code hanlder */
-    }
+    
+    if (strcmp(op_code, "pall) == 0)
+        op_pall(&stack, line_number);
+               
+    else if (strcmp(op_code, "pint) ==0)
+        op_pint(&stack, line_number);
   }
 }
