@@ -39,19 +39,5 @@ void run_monty_exec(FILE *fp)
       fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
       exit(EXIT_FAILURE);
     }
-    
-//     else if (strcmp(op_code, "pall) == 0)
-//         op_pall(&stack, line_number);
-               
-//     else if (strcmp(op_code, "pint) == 0)
-//         op_pint(&stack, line_number);
-                    
-//     else if (strcmp(op_code, "pop") == 0)
-//         op_pop(&stack, line_number);
-//     else
-//     {
-//       fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
-//       exit(EXIT_FAILURE);
-//     }
   }
 }
