@@ -22,9 +22,12 @@ void run_monty_exec(FILE *fp)
     op_code = strtok(line, " ");
     op_code_arg = strtok(NULL, " ");
     
+    if (op_code == NULL)
+      continue; /* skip empty line */
+    
     /* find the opcode handler */
     if (strcmp(op_code, "push") == 0)
-      op_push(&stack, line_number, op_code_arg);
+        op_push(&stack, line_number, op_code_arg);
     
     else if (strcmp(op_code, "pall) == 0)
         op_pall(&stack, line_number);
