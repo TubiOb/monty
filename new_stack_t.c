@@ -9,6 +9,8 @@ stack_t *new_stack_t(int n)
     return (NULL);
   
   new_item->n = n;
+  new_item->prev = NULL;
+  new_item->next = NULL;
   
   return (new_item);
 }
