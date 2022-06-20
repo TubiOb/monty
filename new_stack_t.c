@@ -6,7 +6,10 @@ stack_t *new_stack_t(int n)
   stack_t *new_item = malloc(sizeof(stack_t));
   
   if (new_item == NULL)
-    return (NULL);
+  {
+    fprintf(stderr, "Error: malloc failed\n");
+    exit(EXIT_FAILURE);
+  }
   
   new_item->n = n;
   new_item->prev = NULL;
