@@ -11,5 +11,5 @@ void op_push(stack_t **stack, unsigned int line_number, char *arg)
     exit(EXIT_FAILURE);
   }
   
-  push(&stack, atoi(arg));
+  push(stack, atoi(arg));
 }
