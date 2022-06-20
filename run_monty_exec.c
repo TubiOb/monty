@@ -24,7 +24,7 @@ void run_monty_exec(FILE *fp)
     
     /* find the opcode handler */
     if (strcmp(op_code, "push") == 0)
-      op_push(&stack, op_code_arg);
+      op_push(&stack, line_number, op_code_arg);
     
     else if (strcmp(op_code, "pall) == 0)
         op_pall(&stack, line_number);
