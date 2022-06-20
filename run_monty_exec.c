@@ -10,7 +10,7 @@ void run_monty_exec(FILE *fp)
   size_t line_size;
   ssize_t len;
   char *op_code = NULL, *op_code_arg = NULL;
-  size_t line_number = 0;
+  unsigned int line_number = 0;
   stack_t *stack = NULL;
   void (*op_code_handler)(stack_t **, unsigned int);
   
