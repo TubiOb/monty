@@ -24,20 +24,9 @@ void run_monty_exec(FILE *fp)
     
     /* find the opcode handler */
     if (strcmp(op_code, "push") == 0)
-    {
-      /* cheeck if arg is an int */
-      if (!isnumeric(op_code_arg))
-      {
-        fprintf(stderr, "L%d: usage: push integer\n", line_number);
-        exit(EXIT_FAILURE);
-      }
-      
-      int_op_code_arg = atoi(op_code_arg);
-      push(&stack, int_op_code_arg);
-      continue;
-    }
+      op_push(&stack, op_code_arg);
     
-    if (strcmp(op_code, "pall) == 0)
+    else if (strcmp(op_code, "pall) == 0)
         op_pall(&stack, line_number);
                
     else if (strcmp(op_code, "pint) == 0)
