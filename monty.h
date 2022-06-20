@@ -49,4 +49,6 @@ void op_pop(stack_t **stack, unsigned int line_number);
 
 void run_monty_exec(FILE *fp);
 
+int is_numeric(char *str);
+
 #endif /* MONTY_H */
